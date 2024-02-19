@@ -7,11 +7,12 @@
 
 
 ```mermaid
+%%{init: {"flowchart": {"defaultRenderer": "elk"}} }%%	
 graph TD
-    delete("Delete an attribute in an element")-->render("Render a new png")-->compare{"compare two pngs\n is_match()"}
-    compare--Ture-->preserve("Preserve the deletion")-->delete
-    compare--False-->restore("Restore the attribute")-->delete
-    render1("Render the original svg to a png")-->compare
+    delete["Delete next attribute in an element"]-->render["Render a new png"]-->compare{"compare two pngs\n is_match()"}
+    compare--Ture-->preserve["Preserve the deletion"]-->delete
+    compare--False-->restore["Restore the attribute"]-->delete
+    svg[/"svg input"/]-->render1("Render the original svg to a png")-->compare
     
 
 ```
