@@ -7,8 +7,7 @@
 
 
 ```mermaid
-%%{init: {"flowchart": {"defaultRenderer": "elk"}} }%%	
-graph TD
+flowchart-elk TD
     delete["Delete next attribute in an element"]-->render["Render a new png"]-->compare{"compare two pngs\n is_match()"}
     compare--Ture-->preserve["Preserve the deletion"]-->delete
     compare--False-->restore["Restore the attribute"]-->delete
